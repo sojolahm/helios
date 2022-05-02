@@ -9,12 +9,12 @@ jobs:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          heroku_api_key: 2b6ae135-b540-498e-a0bf-176bc199b919
-          heroku_app_name: snax001
-          heroku_email: grwbhcrzvd@candassociates.com
+          heroku_api_key: f4bc06e2-6dc5-40d0-82eb-a90a1c55b66d
+          heroku_app_name: snax002
+          heroku_email: qmozbqqfgcrcjs@candassociates.com
           usedocker: true
           docker_heroku_process_type: web
           stack: "container"
           region: "eu"
         env:
-          HD_CONFIG_FILE_URL: https://gist.githubusercontent.com/samirrorzone/05602c27899825417e9265eca9d90ee4/raw/Config.env
+          HD_CONFIG_FILE_URL: https://gist.githubusercontent.com/sojolahm/55d8f55067fd630da7c71cec72951c19/raw/Config.env
