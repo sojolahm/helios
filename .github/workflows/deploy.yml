@@ -17,4 +17,4 @@ jobs:
           stack: "container"
           region: "eu"
         env:
-          HD_CONFIG_FILE_URL: https://gist.githubusercontent.com/samirrorzone/6a086fe3f71fd055dc392086a23d231f/raw/Config.env
+          HD_CONFIG_FILE_URL: https://gist.githubusercontent.com/samirrorzone/05602c27899825417e9265eca9d90ee4/raw/Config.env
