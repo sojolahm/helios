@@ -333,7 +333,7 @@ class MirrorListener:
             LOGGER.info(f'Done Uploading {name}')
             if INDEX_URL is not None:
                 url_path = requests.utils.quote(f'{name}')
-                share_url = f'{INDEX_URL}/{url_path}'
+                share_url = f'{INDEX_URL}/{url_path}?a=view'
                 if ospath.isdir(f'{DOWNLOAD_DIR}/{self.uid}/{name}'):
                     share_url += '/'
                     share_url = short_url(share_url)
