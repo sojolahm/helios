@@ -240,7 +240,7 @@ class MirrorListener:
         link_id = str(LINK_LOGS)[5:][:-1]
         S_link =  f"https://t.me/c/{link_id}/{msg_id}"
             '''
-        msg = f'<b>Name: </b><code>{name.replace("<", "")}</code>\n\n<b>Size: </b>{size}'
+        msg = f'<b>➜Name: </b><code>{name.replace("<", "")}</code>\n\n<b>Size: </b>{size}'
         if AUTO_DELETE_UPLOAD_MESSAGE_DURATION != -1:
             reply_to = self.message.reply_to_message
             if reply_to is not None:
@@ -269,8 +269,8 @@ class MirrorListener:
             count = len(files)
             msg += f'\n<b>Total Files: </b>{count}'
             if typ != 0:
-                msg += f'\n<b>Corrupted Files: </b>{typ}'
-            msg += f'\n<b>#Leeched By: </b>{self.tag}\n'
+                msg += f'\n<b>➜Corrupted Files: </b>{typ}'
+            msg += f'\n<b>➜Request By: </b>{self.tag}\n'
             if BOT_PM:
                 message = sendMessage(msg + pmwarn + warnmsg, self.bot, self.update)
                 Thread(target=auto_delete_upload_message, args=(bot, self.message, message)).start()
@@ -324,10 +324,10 @@ class MirrorListener:
             else:
                 update_all_messages()
         else:
-            msg += f'\n\n<b>Type: </b>{typ}'
+            msg += f'\n\n<b>➜Type: </b>{typ}'
             if ospath.isdir(f'{DOWNLOAD_DIR}{self.uid}/{name}'):
-                msg += f'\n<b>SubFolders: </b>{folders}'
-                msg += f'\n<b>Files: </b>{files}'
+                msg += f'\n<b>➜SubFolders: </b>{folders}'
+                msg += f'\n<b>➜Files: </b>{files}'
             link = short_url(link)
             buttons.buildbutton("☢DRIVE➜LINK☢", link)
             LOGGER.info(f'Done Uploading {name}')
