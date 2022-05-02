@@ -353,7 +353,7 @@ class MirrorListener:
             if SOURCE_LINK is True:
                 buttons.buildbutton(f"🔗 Source Link", S_link)
             """
-            uploader = f'\n\n<b>#Uploaded By: </b>{self.tag}\n'
+            uploader = f'\n\n<b>➜Request By: </b>{self.tag}\n'
             if MIRROR_LOGS:
                 try:
                     for i in MIRROR_LOGS:
