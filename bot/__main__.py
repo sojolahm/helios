@@ -58,14 +58,15 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Updates Channel", "https://t.me/heliosmirror")
-    buttons.buildbutton("Support Group", "https://t.me/mirrorsociety")
+
+    buttons.buildbutton("Mirror Group", "https://t.me/samc_z")
     uname = f'<a href="tg://user?id={update.message.from_user.id}">{update.message.from_user.first_name}</a>'
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''Hey! {uname},\n
 This bot can mirror all your links to Google Drive! and also can Upload them on Telegram if you want.
-Type /{BotCommands.HelpCommand} to get a list of available commands
+Type /{BotCommands.HelpCommand} to get a list of available commands.
+To use this bot join support group.
 '''
         sendMarkup(start_string, context.bot, update, reply_markup)
     else:
