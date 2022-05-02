@@ -51,12 +51,10 @@ def stats(update, context):
             f'<b>➜CPU:</b> {cpuUsage}%\n\n'\
             f'<b>➜RAM:</b> {mem_p}%\n\n'\
             f'<b>➜DISK:</b> {disk}%\n\n'\
-            f'<b>➜Physical Cores:</b> {p_core}\n\n'\
-            f'<b>➜Total Cores:</b> {t_core}\n\n'\
-            f'<b>➜SWAP:</b> {swap_t}\n\n<b>Used:</b> {swap_p}%\n'\
             f'<b>➜Memory Total:</b> {mem_t}'\
             f'<b>➜Free:</b> {mem_a}'\
-            f'<b>➜Used:</b> {mem_u}'
+            f'<b>➜Used:</b> {mem_u}'\
+            f'<b>➜UL:</b> {sent} <b> ➜DL:</b> {recv}\n\n'
     sendMessage(stats, context.bot, update)
 
 
